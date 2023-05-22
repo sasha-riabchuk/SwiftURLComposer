@@ -13,7 +13,7 @@ URL Composer is a lightweight Swift library that provides a convenient way to co
 
 To use URL Composer in your project, simply add it to your dependencies in your `Package.swift` file:
 ```swift
-   dependencies: [ .package(url: "https://github.com/example/url-composer", from: "1.0.0") ]
+   dependencies: [ .package(url: "https://github.com/sasha-riabchuk/SwiftURLComposer", from: "1.0.0") ]
 ```
 ## Usage
 
