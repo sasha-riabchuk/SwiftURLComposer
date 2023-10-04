@@ -18,7 +18,7 @@ public struct Path {
     /// - Parameters:
     ///   - path: The path component of the URL.
     ///   - queryItems: The query items associated with the path.
-    public init(path: String,
+    public init(_ path: String,
                 queryItems: [QueryItemProtocol]) {
         self.path = path
         self.queryItems = queryItems
@@ -29,7 +29,7 @@ public struct Path {
     /// - Parameters:
     ///   - path: The path component of the URL.
     ///   - queryItems: The query item associated with the path.
-    public init(path: String,
+    public init(_ path: String,
                 queryItem: QueryItemProtocol) {
         self.path = path
         queryItems = [queryItem]
@@ -39,7 +39,7 @@ public struct Path {
     ///
     /// - Parameters:
     ///   - path: The path component of the URL.
-    public init(path: String) {
+    public init(_ path: String) {
         self.path = path
         queryItems = []
     }
@@ -49,9 +49,9 @@ public struct Path {
     /// - Parameters:
     ///   - path: The path component of the URL.
     ///   - queryItemBuilder: A closure that returns an array of `QueryItem`s.
-    public init(path: String,
+    public init(_ path: String,
                 @QueryItemBuilder queryItemBuilder: () -> [QueryItemProtocol]) {
-        self.init(path: path, queryItems: queryItemBuilder())
+        self.init(path, queryItems: queryItemBuilder())
     }
 
     /// Initializes a new `Path` instance with a given path and a query item builder.
@@ -59,8 +59,8 @@ public struct Path {
     /// - Parameters:
     ///   - path: The path component of the URL.
     ///   - queryItemBuilder: A closure that returns an instance of `QueryItem`.
-    public init(path: String,
+    public init(_ path: String,
                 @QueryItemBuilder queryItemBuilder: () -> QueryItemProtocol) {
-        self.init(path: path, queryItem: queryItemBuilder())
+        self.init(path, queryItem: queryItemBuilder())
     }
 }

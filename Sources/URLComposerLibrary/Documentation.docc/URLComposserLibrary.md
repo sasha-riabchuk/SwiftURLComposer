@@ -19,8 +19,8 @@ To use URL Composer in your project, simply add it to your dependencies in your 
 
 Here's an example of how to use URL Composer to construct a URL with query parameters:
 ```swift
-Domain(scheme: .https, domain: "csas.cz") {
-    Path(path: "/application/csas") {
+Domain(scheme: .https, domain: "domain.com") {
+    Path(path: "/application/camera") {
         QueryItem(key: "id", value: "someID")
         QueryItem(key: "id2", value: "someID2")
         QueryItem(key: "id3", value: "someID3")
